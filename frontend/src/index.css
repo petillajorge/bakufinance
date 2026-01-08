@@ -1,0 +1,137 @@
+:root {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #121212;
+  --bg-card: #1a1a1a;
+
+  --accent-primary: #00ff9d;
+  /* Neon Green */
+  --accent-secondary: #00b8d4;
+  /* Neon Blue */
+
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0a0;
+
+  --positive: #00ff9d;
+  --negative: #ff3d71;
+
+  --font-display: 'Orbitron', 'Inter', system-ui;
+  --font-body: 'Rajdhani', 'Inter', system-ui;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  background-color: #030303;
+  color: var(--text-primary);
+  /* Cleaner Retro Grid */
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  min-height: 100vh;
+  overflow-x: hidden;
+  margin: 2%;
+  /* Using 2% instead of 5 to avoid too much spacing on small screens, user asked for 5% border so maybe padding is safer or margin on container */
+  width: 96%;
+  /* 100 - 2*2 */
+  margin-left: 2%;
+}
+
+#root {
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+}
+
+/* Liquid Crystal Style */
+.liquid-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  box-shadow:
+    0 8px 32px 0 rgba(0, 0, 0, 0.5),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.liquid-card:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow:
+    0 12px 40px 0 rgba(0, 0, 0, 0.6),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.liquid-input {
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  transition: all 0.2s ease;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.liquid-input:focus {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 20px rgba(0, 255, 157, 0.2);
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.liquid-button {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  transition: all 0.2s ease;
+}
+
+.liquid-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--positive), var(--accent-secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.positive {
+  color: var(--positive);
+}
+
+.negative {
+  color: var(--negative);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-card);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
