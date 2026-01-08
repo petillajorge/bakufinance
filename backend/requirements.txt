@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+websockets
+yfinance
+ccxt
+pandas
+python-multipart
